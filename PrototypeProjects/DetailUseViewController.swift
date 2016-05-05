@@ -49,6 +49,7 @@ class DetailUseViewController: UIViewController,UITableViewDataSource ,UITableVi
     
     */
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("celldetail", forIndexPath: indexPath) as! DetailUseTableViewCell
         cell.number?.text = no[indexPath.row]
@@ -62,6 +63,9 @@ class DetailUseViewController: UIViewController,UITableViewDataSource ,UITableVi
         }
         return cell
     }
+    
+    
+    
     @IBAction func back(sender: UIBarButtonItem) {
         
         let alert = UIAlertController(title: "LOGOUT", message: "Do your need logout", preferredStyle: UIAlertControllerStyle.Alert)
@@ -82,4 +86,7 @@ class DetailUseViewController: UIViewController,UITableViewDataSource ,UITableVi
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
     }
 
+   
+    
+  
 }

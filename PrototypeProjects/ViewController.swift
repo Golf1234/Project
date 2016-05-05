@@ -13,6 +13,9 @@ class ViewController: UIViewController {
   
     var tf:UITextField?
     
+    let usercompoundpassword:String = "g"
+    let userstorepassword:String = "f"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor =  UIColor(red: 0.698, green: 0.6824, blue: 0.949, alpha: 1.0)
@@ -31,75 +34,91 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    
+    
 
     @IBAction func action(sender: AnyObject) {
-   
-    let alert = UIAlertController(title: "LOGIN", message: "Your password", preferredStyle: UIAlertControllerStyle.Alert)
         
-        alert.addTextFieldWithConfigurationHandler { textField in
-            textField.placeholder = "Password"
-            textField.secureTextEntry = true
+//        var loginTextField: UITextField?
+        var passwordTextField: UITextField?
+        let alertController = UIAlertController(title: "UIAlertController", message: "UIAlertController With TextField", preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            print("Ok Button Pressed")
             
             
             
-          
+            
+            if((passwordTextField?.text)   == self.userstorepassword ){
+                self.performSegueWithIdentifier("store", sender: self)
+            }
+            else{
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            
+            
+            
+            
+            
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+            print("Cancel Button Pressed")
         }
         
-        let done = {
-            
-
-            (action: UIAlertAction!) in
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
-            
-            self.performSegueWithIdentifier("store", sender: self)
-            
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+        alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            // Enter the textfiled customization code here.
+            passwordTextField = textField
+            passwordTextField?.placeholder = "Password"
+            passwordTextField?.secureTextEntry = true
         }
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
 
-        
-        
-    alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: done))
-        self.presentViewController(alert,animated:true, completion: nil)
-        
-    alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
- 
-        
     }
 
     
     @IBAction func compound(sender: AnyObject) {
-        
-        let alert = UIAlertController(title: "LOGIN", message: "Your password", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        alert.addTextFieldWithConfigurationHandler { textField in
-            textField.placeholder = "Password"
-            textField.secureTextEntry = true
-        }
-
-        
-        let done = {
-            (action: UIAlertAction!) in
-            self.dismissViewControllerAnimated(true, completion: nil)
+//        var loginTextField: UITextField?
+        var passwordTextField: UITextField?
+        let alertController = UIAlertController(title: "UIAlertController", message: "UIAlertController With TextField", preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            print("Ok Button Pressed")
             
-            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            if((passwordTextField?.text)   == self.usercompoundpassword ){
+             self.performSegueWithIdentifier("compount", sender: self)
+            }
+            else{
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            
+            
+            
            
-            self.performSegueWithIdentifier("compount", sender: self)
+            
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+            print("Cancel Button Pressed")
+        }
+        
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+                alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            // Enter the textfiled customization code here.
+            passwordTextField = textField
+            passwordTextField?.placeholder = "Password"
+            passwordTextField?.secureTextEntry = true
             
         }
         
-        
-        
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: done))
-        self.presentViewController(alert,animated:true, completion: nil)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
 
-        
 
-    
-    
-    }
-    
-   }
 
+
+}
+}

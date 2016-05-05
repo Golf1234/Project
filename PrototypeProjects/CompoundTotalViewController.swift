@@ -42,8 +42,17 @@ class CompoundTotalViewController: UIViewController ,UITableViewDataSource , UIT
         return data.count
     }
     
-     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "section \(section)"
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        switch section
+        {
+        case 0:
+            return "Apple Devices"
+        case 1:
+            return "Samsung Devices"
+        default:
+            return "Other Devices"
+        }
     }
     
     /*
@@ -65,6 +74,8 @@ class CompoundTotalViewController: UIViewController ,UITableViewDataSource , UIT
         
         return cell
     }
+    
+    
     
     @IBAction func logout(sender: UIBarButtonItem) {
         
