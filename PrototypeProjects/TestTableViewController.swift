@@ -14,6 +14,7 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
     
     @IBOutlet var tableview: UITableView!
     
+    @IBOutlet var labelusernamestore: UILabel!
    
     
     var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
@@ -30,6 +31,8 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        labelusernamestore.text = Userstore.instance.getNamestore()
     }
 
     override func didReceiveMemoryWarning() {

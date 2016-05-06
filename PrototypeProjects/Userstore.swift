@@ -1,27 +1,25 @@
 //
-//  User.swift
+//  Userstore.swift
 //  PrototypeProjects
 //
-//  Created by Pattanapong Chankaew on 5/6/2559 BE.
+//  Created by Pattanapong Chankaew on 5/7/2559 BE.
 //  Copyright © 2559 Pattanapong Chankaew. All rights reserved.
 //
 
 import Foundation
-
-
-class User {
-    static let instance = User()
+class Userstore {
+    static let instance = Userstore()
     
     private init(){}
     
     private var name:String = ""
     
-    func getName() -> String{
+    func getNamestore() -> String{
         return self.name
     }
     
-    func setName(name:String){
+    func setNamestore(name:String){
         self.name = name
     }
-
+    
 }

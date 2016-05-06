@@ -13,6 +13,9 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
     
     @IBOutlet var tableview: UITableView!
     
+    @IBOutlet var labelusernamestore: UILabel!
+    
+    
     var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
     var count = ["20","12","55","77","55","25","15","99","30","45","33","33","66"]
     
@@ -27,13 +30,17 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
 //            
 //            self.performSegueWithIdentifier("store", sender: self)
 //        }
-
+        
+        labelusernamestore.text = Userstore.instance.getNamestore()
 
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        
+        
         // Dispose of any resources that can be recreated.
     }
     

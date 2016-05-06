@@ -55,6 +55,7 @@ class CompoundTotalViewController: UIViewController ,UITableViewDataSource , UIT
     {
        
     return User.instance.getName()
+        
     
     }
     

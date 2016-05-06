@@ -1000,9 +1000,20 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-dH-BeE">
+                                <rect key="frame" x="10" y="89" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gM3-mQ-AaS"/>
+                                    <constraint firstAttribute="width" constant="130" id="nMq-wC-XEr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="fSe-dH-BeE" firstAttribute="top" secondItem="Epv-Rm-chG" secondAttribute="bottom" constant="15" id="HJz-Yz-VNp"/>
                             <constraint firstItem="dWQ-Ii-4cM" firstAttribute="top" secondItem="c3B-f5-dIo" secondAttribute="bottom" id="Ica-Mn-VXj"/>
                             <constraint firstItem="Kf0-tQ-sJW" firstAttribute="top" secondItem="Of4-HE-xDc" secondAttribute="bottom" constant="80" id="JYx-sU-G9Q"/>
                             <constraint firstItem="Epv-Rm-chG" firstAttribute="leading" secondItem="aB6-Oj-jGa" secondAttribute="leading" id="K1k-iC-nC3"/>
@@ -1013,6 +1024,7 @@
                             <constraint firstItem="RA2-Yf-FW1" firstAttribute="centerX" secondItem="Epv-Rm-chG" secondAttribute="centerX" id="Y6f-ye-rz0"/>
                             <constraint firstItem="RA2-Yf-FW1" firstAttribute="top" secondItem="Epv-Rm-chG" secondAttribute="bottom" id="fHg-p3-dl5"/>
                             <constraint firstItem="c3B-f5-dIo" firstAttribute="top" secondItem="Of4-HE-xDc" secondAttribute="bottom" constant="150" id="kcg-xD-7Bf"/>
+                            <constraint firstItem="fSe-dH-BeE" firstAttribute="leading" secondItem="aB6-Oj-jGa" secondAttribute="leading" constant="10" id="lH7-Tv-7BS"/>
                             <constraint firstAttribute="trailing" secondItem="Kf0-tQ-sJW" secondAttribute="trailing" constant="20" id="mkB-CM-GZ3"/>
                             <constraint firstAttribute="trailing" secondItem="c3B-f5-dIo" secondAttribute="trailing" id="su3-9y-Dro"/>
                             <constraint firstItem="pA6-dT-Mac" firstAttribute="top" secondItem="Of4-HE-xDc" secondAttribute="bottom" constant="80" id="tEm-U8-a2F"/>
@@ -1030,6 +1042,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelusernamestore" destination="fSe-dH-BeE" id="Ilu-R4-89m"/>
                         <outlet property="tableview" destination="c3B-f5-dIo" id="BR8-9X-Tnv"/>
                     </connections>
                 </viewController>
@@ -1275,6 +1288,16 @@
                                     <outlet property="delegate" destination="dUo-dW-SmW" id="MrZ-wF-E2H"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIU-O3-bLC">
+                                <rect key="frame" x="10" y="89" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="7vp-dt-Wgu"/>
+                                    <constraint firstAttribute="height" constant="30" id="Dp2-Ct-QDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1286,7 +1309,9 @@
                             <constraint firstAttribute="trailing" secondItem="SlH-F6-Vdb" secondAttribute="trailing" id="Y4U-de-uDM"/>
                             <constraint firstAttribute="trailing" secondItem="27h-Cq-ytl" secondAttribute="trailing" constant="20" id="dDP-06-IFT"/>
                             <constraint firstItem="SlH-F6-Vdb" firstAttribute="leading" secondItem="4Is-tQ-1eO" secondAttribute="leading" id="fPj-bW-osT"/>
+                            <constraint firstItem="fIU-O3-bLC" firstAttribute="top" secondItem="gTO-8k-d9R" secondAttribute="bottom" constant="15" id="hb8-iF-Ysh"/>
                             <constraint firstItem="oEY-aH-sOL" firstAttribute="top" secondItem="SlH-F6-Vdb" secondAttribute="bottom" id="htM-oV-bLE"/>
+                            <constraint firstItem="fIU-O3-bLC" firstAttribute="leading" secondItem="4Is-tQ-1eO" secondAttribute="leading" constant="10" id="maf-Jb-BcQ"/>
                             <constraint firstAttribute="trailing" secondItem="gTO-8k-d9R" secondAttribute="trailing" id="mgQ-cS-Tdv"/>
                         </constraints>
                     </view>
@@ -1301,6 +1326,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="labelusernamestore" destination="fIU-O3-bLC" id="Jpl-Mp-B8v"/>
                         <outlet property="tableview" destination="SlH-F6-Vdb" id="isG-76-1Ne"/>
                     </connections>
                 </viewController>
@@ -1341,7 +1367,7 @@
         <image name="เหงือกใช้" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n52-8H-wYR"/>
-        <segue reference="90W-6n-LtQ"/>
+        <segue reference="g3j-2f-tnG"/>
+        <segue reference="Ofa-sX-BeM"/>
     </inferredMetricsTieBreakers>
 </document>

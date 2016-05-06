@@ -30,6 +30,13 @@ class ViewController: UIViewController {
 //        }
         
         User.instance.setName("Pattanapong")
+        
+        Userstore.instance.setNamestore("GolfGap")
+    
+        
+       
+    
+        
 
     }
 
