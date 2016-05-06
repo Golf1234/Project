@@ -47,15 +47,25 @@ import UIKit
         // Pass the selected object to the new view controller.
     }
     */
+   
+        
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("popstore", forIndexPath: indexPath) as! PopoverStoreTableViewCell
         cell.labelpop?.text = data[indexPath.row]
         cell.labelunit?.text = num[indexPath.row]
         cell.labelunit2?.text = unit[indexPath.row]
         
-        
         return cell
     }
+     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            if editingStyle == UITableViewCellEditingStyle.Delete {
+                data.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            }
+        }
+        
+        
+        
     @IBAction func Confirm(sender: UIButton) {
         
         
