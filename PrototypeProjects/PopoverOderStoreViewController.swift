@@ -16,15 +16,24 @@ class PopoverOderStoreViewController: UIViewController,UIPickerViewDataSource,UI
     
     var pickerDataSource = ["kg", "ml"]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerview.dataSource = self
         pickerview.delegate = self
 
-        text.keyboardType = UIKeyboardType.NumberPad
+        text.keyboardType = UIKeyboardType.DecimalPad
         self.view.backgroundColor = UIColor(red: 0.9137, green: 0.9098, blue: 0.949, alpha: 1.0)
+       
+        
+        
+        
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,6 +62,9 @@ class PopoverOderStoreViewController: UIViewController,UIPickerViewDataSource,UI
     }
     
     @IBAction func Done(sender: AnyObject) {
-         self.dismissViewControllerAnimated(true, completion: nil)
-    }
+        if((text.text ) != ""){
+            self.dismissViewControllerAnimated(true, completion: nil)
+
+        }
+             }
 }
