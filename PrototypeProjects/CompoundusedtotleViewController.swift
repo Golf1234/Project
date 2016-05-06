@@ -12,6 +12,9 @@ class CompoundusedtotleViewController: UIViewController ,UITableViewDataSource ,
 
     @IBOutlet var tableview: UITableView!
     
+    @IBOutlet var lablenameuser: UILabel!
+    
+    
      var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
     
     var count = ["20","12","55","77","55","25","15","99","30","45","33","33","66"]
@@ -19,6 +22,8 @@ class CompoundusedtotleViewController: UIViewController ,UITableViewDataSource ,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        lablenameuser.text = User.instance.getName()
+        
         // Do any additional setup after loading the view.
     }
 

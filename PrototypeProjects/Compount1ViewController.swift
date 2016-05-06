@@ -18,13 +18,16 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
         super.viewDidLoad()
         
         
-        
+          lablenameuser.text = User.instance.getName()
         
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+      
+        
         // Dispose of any resources that can be recreated.
     }
     
@@ -111,6 +114,11 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
     @IBAction func popoder(sender: UIButton) {
      performSegueWithIdentifier("popdetail", sender: self)
     }
+    
+    @IBOutlet var lablenameuser: UILabel!
+    
+  
+    
 }
 
 

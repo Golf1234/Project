@@ -12,6 +12,10 @@ import Alamofire
 class CompoundTotalViewController: UIViewController ,UITableViewDataSource , UITableViewDelegate {
 
     @IBOutlet var tableview: UITableView!
+    @IBOutlet var lablenameuser: UILabel!
+    
+    
+    var test:String = ""
     
     
     var data = [["Latex","Sulphur","ZnO","ABC"],["ZDEC","ZDBC","TiO2"],["Anti foam","Nitric Acid","LMC9CF"]]
@@ -22,8 +26,13 @@ class CompoundTotalViewController: UIViewController ,UITableViewDataSource , UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lablenameuser.text = User.instance.getName()
 
         // Do any additional setup after loading the view.
+        print(test)
+        
+        
     }
     
 
@@ -44,15 +53,9 @@ class CompoundTotalViewController: UIViewController ,UITableViewDataSource , UIT
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        switch section
-        {
-        case 0:
-            return "Apple Devices"
-        case 1:
-            return "Samsung Devices"
-        default:
-            return "Other Devices"
-        }
+       
+    return User.instance.getName()
+    
     }
     
     /*

@@ -13,7 +13,8 @@ class ViewController: UIViewController {
   
     var tf:UITextField?
     
-    let usercompoundpassword:String = "g"
+    let usercompoundpassword:String = "1234"
+    
     let userstorepassword:String = "f"
     
     override func viewDidLoad() {
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
 //            
 //            self.performSegueWithIdentifier("store", sender: self)
 //        }
+        
+        User.instance.setName("Pattanapong")
 
     }
 
@@ -35,6 +38,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+        
+//        if segue.identifier == ""{
+//            var destination:Compount1ViewController = segue.destinationViewController as! Compount1ViewController
+        
+//        }
+
+     }
+ 
+
 
     
     
@@ -56,8 +79,6 @@ class ViewController: UIViewController {
             else{
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
-            
-            
             
             
             

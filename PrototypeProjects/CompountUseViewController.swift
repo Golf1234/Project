@@ -12,10 +12,14 @@ class CompountUseViewController: UIViewController,UITableViewDataSource , UITabl
     
     @IBOutlet var tableviewcomuse: UITableView!
     
+    @IBOutlet var lablenameuser: UILabel!
+    
     var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lablenameuser.text = User.instance.getName()
         
         // Do any additional setup after loading the view.
     }

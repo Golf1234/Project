@@ -220,6 +220,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-ch-ju5">
+                                <rect key="frame" x="10" y="35" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5qh-Sy-jqq"/>
+                                    <constraint firstAttribute="width" constant="130" id="Hx9-zS-lfn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -230,6 +240,7 @@
                             <constraint firstItem="nZE-Lj-LmB" firstAttribute="centerY" secondItem="SP4-Sp-WE6" secondAttribute="centerY" id="O8o-Np-8ak"/>
                             <constraint firstItem="nZE-Lj-LmB" firstAttribute="leading" secondItem="SP4-Sp-WE6" secondAttribute="leading" id="TQU-L1-CEG"/>
                             <constraint firstItem="Key-rl-dkN" firstAttribute="centerX" secondItem="giC-JN-nuC" secondAttribute="centerX" id="TXh-E9-H9U"/>
+                            <constraint firstItem="Zyj-ch-ju5" firstAttribute="leading" secondItem="SP4-Sp-WE6" secondAttribute="leading" constant="10" id="eKf-bV-6xd"/>
                             <constraint firstAttribute="trailing" secondItem="nZE-Lj-LmB" secondAttribute="trailing" id="lXu-lm-MJg"/>
                             <constraint firstItem="Key-rl-dkN" firstAttribute="top" secondItem="giC-JN-nuC" secondAttribute="bottom" id="t7u-tX-xzg"/>
                             <constraint firstItem="Rbw-uO-ITV" firstAttribute="leading" secondItem="SP4-Sp-WE6" secondAttribute="leading" constant="20" id="t8f-Dj-tLb"/>
@@ -238,6 +249,7 @@
                             <constraint firstItem="Rbw-uO-ITV" firstAttribute="top" secondItem="9rd-xq-gXf" secondAttribute="bottom" constant="60" id="wrI-wV-ywe"/>
                             <constraint firstAttribute="trailing" secondItem="Rbw-uO-ITV" secondAttribute="trailing" constant="20" id="y73-hm-Zaa"/>
                             <constraint firstAttribute="trailing" secondItem="rom-U4-8VZ" secondAttribute="trailing" constant="30" id="zMR-wq-VO0"/>
+                            <constraint firstItem="Rbw-uO-ITV" firstAttribute="top" secondItem="Zyj-ch-ju5" secondAttribute="bottom" constant="15" id="zvC-fJ-4iH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -247,6 +259,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Oder" image="สั่งสาร" id="DL2-z0-NAs"/>
                     <connections>
+                        <outlet property="lablenameuser" destination="Zyj-ch-ju5" id="Hrm-QA-kkr"/>
                         <outlet property="tableview" destination="nZE-Lj-LmB" id="owr-RH-97q"/>
                     </connections>
                 </viewController>
@@ -280,6 +293,44 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เตรียมสารเคมี" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hI-Hf-aAI">
+                                <rect key="frame" x="20" y="80" width="560" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="2o5-dd-J8b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-XH-Pbr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <items>
+                                    <navigationItem title="Compound" prompt=" " id="6pE-yv-uh7">
+                                        <barButtonItem key="rightBarButtonItem" image="Menu-100" id="UYo-da-BP4">
+                                            <connections>
+                                                <action selector="logout:" destination="q5h-HK-Ov3" id="aVu-nc-sgB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ6-iR-WzW">
+                                <rect key="frame" x="300" y="74" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="GTI-5l-C7K"/>
+                                    <constraint firstAttribute="width" constant="1" id="gpt-pV-8UO"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41r-Bz-174">
+                                <rect key="frame" x="14" y="42" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7tp-70-GYK"/>
+                                    <constraint firstAttribute="width" constant="130" id="u4D-Ik-Ino"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-TN-ODy">
                                 <rect key="frame" x="0.0" y="170" width="600" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,40 +383,14 @@
                                     <outlet property="delegate" destination="q5h-HK-Ov3" id="gqo-JF-6Ip"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เตรียมสารเคมี" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hI-Hf-aAI">
-                                <rect key="frame" x="20" y="80" width="560" height="69"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="2o5-dd-J8b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-XH-Pbr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
-                                <items>
-                                    <navigationItem title="Compound" prompt=" " id="6pE-yv-uh7">
-                                        <barButtonItem key="rightBarButtonItem" image="Menu-100" id="UYo-da-BP4">
-                                            <connections>
-                                                <action selector="logout:" destination="q5h-HK-Ov3" id="aVu-nc-sgB"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ6-iR-WzW">
-                                <rect key="frame" x="300" y="74" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="GTI-5l-C7K"/>
-                                    <constraint firstAttribute="width" constant="1" id="gpt-pV-8UO"/>
-                                </constraints>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gQH-eM-JRZ" firstAttribute="centerY" secondItem="1hI-Hf-aAI" secondAttribute="centerY" id="0KK-dB-X7e"/>
                             <constraint firstAttribute="trailing" secondItem="nRb-TN-ODy" secondAttribute="trailing" id="2Y9-Bi-PV9"/>
+                            <constraint firstItem="41r-Bz-174" firstAttribute="leading" secondItem="YR7-5z-YD8" secondAttribute="leading" constant="10" id="4TV-yy-bnZ"/>
                             <constraint firstItem="1hI-Hf-aAI" firstAttribute="leading" secondItem="YR7-5z-YD8" secondAttribute="leadingMargin" id="7Eo-G5-Idd"/>
+                            <constraint firstItem="1hI-Hf-aAI" firstAttribute="top" secondItem="41r-Bz-174" secondAttribute="bottom" constant="15" id="AFm-Fj-xOD"/>
                             <constraint firstItem="2ZT-C2-VKY" firstAttribute="top" secondItem="nRb-TN-ODy" secondAttribute="bottom" id="G9g-aB-1Pd"/>
                             <constraint firstItem="nRb-TN-ODy" firstAttribute="leading" secondItem="YR7-5z-YD8" secondAttribute="leading" id="SOA-Rm-a8V"/>
                             <constraint firstItem="XwG-XH-Pbr" firstAttribute="top" secondItem="YR7-5z-YD8" secondAttribute="top" id="T5N-cL-p1B"/>
@@ -381,6 +406,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Use" image="เหงือกใช้" id="6N3-tp-YrH"/>
                     <connections>
+                        <outlet property="lablenameuser" destination="41r-Bz-174" id="Ure-WY-pcw"/>
                         <outlet property="tableviewcomuse" destination="nRb-TN-ODy" id="97I-Qf-KXM"/>
                     </connections>
                 </viewController>
@@ -483,6 +509,16 @@
                                     <outlet property="delegate" destination="n30-aO-Biu" id="4CK-j9-cuH"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPi-g1-1YH">
+                                <rect key="frame" x="10" y="35" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Tfa-0X-hKo"/>
+                                    <constraint firstAttribute="height" constant="30" id="YS9-in-eW8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -492,13 +528,18 @@
                             <constraint firstItem="YJj-ZR-CI0" firstAttribute="leading" secondItem="Xyu-XG-1gO" secondAttribute="leading" id="8Xx-t8-ybI"/>
                             <constraint firstItem="iTZ-A7-7Uj" firstAttribute="leading" secondItem="Xyu-XG-1gO" secondAttribute="leading" id="93B-MN-HRw"/>
                             <constraint firstItem="fJP-Cc-QVo" firstAttribute="top" secondItem="Xyu-XG-1gO" secondAttribute="top" id="Q09-8g-JbA"/>
+                            <constraint firstItem="YJj-ZR-CI0" firstAttribute="top" secondItem="tPi-g1-1YH" secondAttribute="bottom" constant="15" id="WL7-DZ-J2W"/>
                             <constraint firstItem="Tku-a4-AtO" firstAttribute="top" secondItem="iTZ-A7-7Uj" secondAttribute="bottom" id="Yry-21-5E3"/>
                             <constraint firstAttribute="trailing" secondItem="iTZ-A7-7Uj" secondAttribute="trailing" id="dam-sq-iea"/>
                             <constraint firstItem="iTZ-A7-7Uj" firstAttribute="top" secondItem="Aqk-sd-4Hg" secondAttribute="bottom" constant="130" id="gX0-aE-D27"/>
+                            <constraint firstItem="tPi-g1-1YH" firstAttribute="leading" secondItem="Xyu-XG-1gO" secondAttribute="leading" constant="10" id="nJS-Ef-umR"/>
                             <constraint firstItem="fJP-Cc-QVo" firstAttribute="leading" secondItem="Xyu-XG-1gO" secondAttribute="leading" id="ooe-pI-pl7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total" image="สารคงเหลือ" id="3ja-td-ZTp"/>
+                    <connections>
+                        <outlet property="lablenameuser" destination="tPi-g1-1YH" id="N3O-fv-dte"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSy-nS-1v2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -604,9 +645,20 @@
                                 <rect key="frame" x="20" y="153" width="560" height="159"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW4-Ih-ZYp">
+                                <rect key="frame" x="10" y="35" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AL0-VO-jZL"/>
+                                    <constraint firstAttribute="width" constant="130" id="Dyu-M9-S8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Sew-Kb-ylr" firstAttribute="top" secondItem="PW4-Ih-ZYp" secondAttribute="bottom" constant="15" id="1NQ-yf-sbg"/>
                             <constraint firstItem="mNc-Ke-7UW" firstAttribute="top" secondItem="Sew-Kb-ylr" secondAttribute="bottom" constant="8" id="2Dp-pT-38Y"/>
                             <constraint firstItem="Sew-Kb-ylr" firstAttribute="top" secondItem="oEa-oP-r3b" secondAttribute="bottom" constant="60" id="3ue-JL-uhy"/>
                             <constraint firstItem="OuZ-ky-Rhx" firstAttribute="leading" secondItem="uZJ-AF-Tzc" secondAttribute="leading" id="8As-PO-cQo"/>
@@ -617,6 +669,7 @@
                             <constraint firstAttribute="trailing" secondItem="mNc-Ke-7UW" secondAttribute="trailing" constant="20" id="aji-WC-B3J"/>
                             <constraint firstItem="Sew-Kb-ylr" firstAttribute="leading" secondItem="uZJ-AF-Tzc" secondAttribute="leading" constant="20" id="ky6-Qd-Vc4"/>
                             <constraint firstAttribute="trailing" secondItem="UvS-aB-a0n" secondAttribute="trailing" id="lxG-HJ-LQG"/>
+                            <constraint firstItem="PW4-Ih-ZYp" firstAttribute="leading" secondItem="uZJ-AF-Tzc" secondAttribute="leading" constant="10" id="p2u-Q0-fFZ"/>
                             <constraint firstItem="UvS-aB-a0n" firstAttribute="leading" secondItem="uZJ-AF-Tzc" secondAttribute="leading" id="pTU-DP-PyZ"/>
                             <constraint firstItem="hCc-p9-BvP" firstAttribute="top" secondItem="UvS-aB-a0n" secondAttribute="bottom" constant="20" id="pyN-nG-gJ5"/>
                             <constraint firstItem="UvS-aB-a0n" firstAttribute="top" secondItem="mNc-Ke-7UW" secondAttribute="bottom" constant="8" id="rYe-DJ-6Mo"/>
@@ -625,6 +678,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Total Usage" image="ที่ใช้ไปกราฟ" id="EQt-gm-hdb"/>
                     <connections>
+                        <outlet property="lablenameuser" destination="PW4-Ih-ZYp" id="Tpo-bH-fPW"/>
                         <outlet property="tableview" destination="UvS-aB-a0n" id="G5X-Ze-FEO"/>
                         <segue destination="dYg-iC-5gH" kind="presentation" identifier="showdetail" id="A1j-dJ-b45"/>
                     </connections>
@@ -1287,7 +1341,7 @@
         <image name="เหงือกใช้" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ofa-sX-BeM"/>
-        <segue reference="g3j-2f-tnG"/>
+        <segue reference="n52-8H-wYR"/>
+        <segue reference="90W-6n-LtQ"/>
     </inferredMetricsTieBreakers>
 </document>

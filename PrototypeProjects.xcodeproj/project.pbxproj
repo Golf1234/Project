@@ -21,6 +21,7 @@
 		A58C261B1C496A58005D1E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58C26191C496A58005D1E48 /* LaunchScreen.storyboard */; };
 		A58C26261C496A58005D1E48 /* PrototypeProjectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C26251C496A58005D1E48 /* PrototypeProjectsTests.swift */; };
 		A58C26311C496A58005D1E48 /* PrototypeProjectsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C26301C496A58005D1E48 /* PrototypeProjectsUITests.swift */; };
+		A58D4AD01CDCD9990042FC80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D4ACF1CDCD9990042FC80 /* User.swift */; };
 		A597BA801C4FC43600A7F870 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597BA7F1C4FC43600A7F870 /* TestTableViewController.swift */; };
 		A597BA821C4FC46200A7F870 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597BA811C4FC46200A7F870 /* TestTableViewCell.swift */; };
 		A597BA861C4FD6AF00A7F870 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597BA851C4FD6AF00A7F870 /* AccountViewController.swift */; };
@@ -145,6 +146,7 @@
 		A58C262C1C496A58005D1E48 /* PrototypeProjectsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrototypeProjectsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58C26301C496A58005D1E48 /* PrototypeProjectsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeProjectsUITests.swift; sourceTree = "<group>"; };
 		A58C26321C496A58005D1E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58D4ACF1CDCD9990042FC80 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A597BA7F1C4FC43600A7F870 /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		A597BA811C4FC46200A7F870 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		A597BA851C4FD6AF00A7F870 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				A58B001D1C58A3A900AE67A3 /* PopoverStoreTableViewCell.swift */,
 				A58B001F1C58B2BB00AE67A3 /* PopoverOderStoreViewController.swift */,
 				A5A5502F1C91B75D001E1F20 /* Images-4.xcassets */,
+				A58D4ACF1CDCD9990042FC80 /* User.swift */,
 			);
 			path = PrototypeProjects;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				A58256B81C578442005DE15D /* CompoundusedtotleViewController.swift in Sources */,
 				A597BA801C4FC43600A7F870 /* TestTableViewController.swift in Sources */,
 				A5A8D4431C556AA500BA737E /* CompountUseViewController.swift in Sources */,
+				A58D4AD01CDCD9990042FC80 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
