@@ -21,20 +21,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor =  UIColor(red: 0.698, green: 0.6824, blue: 0.949, alpha: 1.0)
         
-//        let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
-//        
-//        if(!isUserLoggedIn ){
-//            
-//            
-//            self.performSegueWithIdentifier("store", sender: self)
-//        }
+//
         
         User.instance.setName("Pattanapong")
         
         Userstore.instance.setNamestore("GolfGap")
-    
-        
-       
     
         
 
@@ -73,7 +64,7 @@ class ViewController: UIViewController {
         
 //        var loginTextField: UITextField?
         var passwordTextField: UITextField?
-        let alertController = UIAlertController(title: "UIAlertController", message: "UIAlertController With TextField", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "LOGIN", message: "Need you password", preferredStyle: .Alert)
         let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             print("Ok Button Pressed")
             
@@ -112,7 +103,7 @@ class ViewController: UIViewController {
     @IBAction func compound(sender: AnyObject) {
 //        var loginTextField: UITextField?
         var passwordTextField: UITextField?
-        let alertController = UIAlertController(title: "UIAlertController", message: "UIAlertController With TextField", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "LOGIN", message: "Need you password", preferredStyle: .Alert)
         let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             print("Ok Button Pressed")
             
@@ -146,7 +137,6 @@ class ViewController: UIViewController {
         presentViewController(alertController, animated: true, completion: nil)
 
 
-
-
 }
+      
 }

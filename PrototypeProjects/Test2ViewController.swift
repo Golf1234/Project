@@ -16,15 +16,16 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
     @IBOutlet var labelusernamestore: UILabel!
     
     
+    
     var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
-    var count = ["20","12","55","77","55","25","15","99","30","45","33","33","66"]
+    var count:[Int] = [20,8,5,77,55,25,15,99,30,45,33,33,66]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //
 //        let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
-//        
+//
 //        if(!isUserLoggedIn ){
 //            
 //            
@@ -33,13 +34,42 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
         
         labelusernamestore.text = Userstore.instance.getNamestore()
 
+
         // Do any additional setup after loading the view.
+        if count.contains(5) {
+            
+                let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+                UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+                
+                guard let settings = UIApplication.sharedApplication().currentUserNotificationSettings() else { return }
+                
+                if settings.types == .None {
+                    let ac = UIAlertController(title: "Can't schedule", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .Alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    presentViewController(ac, animated: true, completion: nil)
+                    return
+                }
+                
+                let notification = UILocalNotification()
+                
+                notification.fireDate = NSDate(timeIntervalSinceNow :20)
+                notification.alertBody = "Products is low!"
+                notification.alertAction = "be awesome!"
+                notification.soundName = UILocalNotificationDefaultSoundName
+                notification.userInfo = ["CustomField1": "w00t"]
+            
+            
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            
+            
+
+        }
+ 
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        
         
         // Dispose of any resources that can be recreated.
     }
@@ -73,11 +103,13 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! Test2TableViewCell
+        
         cell.labeltest2?.text = data[indexPath.row]
-        cell.labelcount?.text = count[indexPath.row]
+        cell.labelcount?.text = "\(count[indexPath.row])"
         
         if((indexPath.row%2)==0){
             cell.backgroundColor =  UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
+        
         }
         else{
            cell.backgroundColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1.0)
@@ -85,12 +117,14 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
 
         
         return cell
+        
+        
     }
     
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("popdetail", sender: indexPath)
-    }
+//    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        performSegueWithIdentifier("popdetail", sender: indexPath)
+//    }
 //    @IBAction func logout(sender: UIBarButtonItem) {
 //        
 //        let actionSheet = UIAlertController(title: "You need logout",
@@ -159,5 +193,5 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
 
     }
     
-   
+    
 }

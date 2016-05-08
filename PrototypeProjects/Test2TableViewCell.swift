@@ -13,6 +13,7 @@ class Test2TableViewCell: UITableViewCell {
     @IBOutlet var labeltest2: UILabel!
     
     @IBOutlet var labelcount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

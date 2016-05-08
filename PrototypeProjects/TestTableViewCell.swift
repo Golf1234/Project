@@ -11,6 +11,7 @@ import UIKit
 class TestTableViewCell: UITableViewCell {
 
     @IBOutlet var labeldata: UILabel!
+    @IBOutlet var labelcount: UILabel!
         
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-    class PopoverStoreViewController: UIViewController , UITableViewDataSource , UITableViewDelegate{
+    class PopoverStoreViewController: UIViewController , UITableViewDataSource , UITableViewDelegate,MFMailComposeViewControllerDelegate{
 
     @IBOutlet var tableview: UITableView!
     
@@ -72,7 +73,11 @@ import UIKit
          (sender as UIButton).backgroundColor = UIColor(red: 0.6824, green: 0.9765, blue: 0.9765, alpha: 1.0)
         
        self.dismissViewControllerAnimated(true, completion: nil)
+        
+
+       
     }
+       
     
         @IBAction func cancle(sender: UIButton) {
             
