@@ -54,7 +54,7 @@ class Test2ViewController: UIViewController ,UITableViewDataSource ,UITableViewD
                 
                 notification.fireDate = NSDate(timeIntervalSinceNow :20)
                 notification.alertBody = "Products is low!"
-                notification.alertAction = "be awesome!"
+                notification.alertAction = "To App!"
                 notification.soundName = UILocalNotificationDefaultSoundName
                 notification.userInfo = ["CustomField1": "w00t"]
             

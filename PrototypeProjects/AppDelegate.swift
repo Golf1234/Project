@@ -29,10 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        if let userInfo = notification.userInfo {
-            let customField1 = userInfo["CustomField1"] as! String
-            print("didReceiveLocalNotification: \(customField1)")
-        }
+//        if let userInfo = notification.userInfo {
+//            let customField1 = userInfo["CustomField1"] as! String
+//            print("didReceiveLocalNotification: \(customField1)")
+//        }
     }
 
 

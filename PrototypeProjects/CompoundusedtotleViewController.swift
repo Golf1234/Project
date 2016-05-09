@@ -39,12 +39,12 @@ class CompoundusedtotleViewController: UIViewController ,UITableViewDataSource ,
                 presentViewController(ac, animated: true, completion: nil)
                 return
             }
-            
+        
             let notification = UILocalNotification()
             
-            notification.fireDate = NSDate(timeIntervalSinceNow :20)
+            notification.fireDate = NSDate(timeIntervalSinceNow :3)
             notification.alertBody = "Products is low!"
-            notification.alertAction = "be awesome!"
+            notification.alertAction = "To App!"
             notification.soundName = UILocalNotificationDefaultSoundName
             notification.userInfo = ["CustomField1": "w00t"]
             

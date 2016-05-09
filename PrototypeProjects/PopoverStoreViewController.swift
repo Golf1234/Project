@@ -14,9 +14,9 @@ import MessageUI
     @IBOutlet var tableview: UITableView!
     
     
-    var  data = ["ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA","Polymer"]
-    var unit = ["kg","kg","kg","kg","kg","kg","kg","kg","kg","kg"]
-    var num = ["100","99","92","89","85","82","81","79","75","73"]
+    var  data = [""]
+    var unit = [""]
+    var num  = [""]
     override func viewDidLoad() {
         super.viewDidLoad()
 

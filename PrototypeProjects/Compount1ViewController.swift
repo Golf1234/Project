@@ -63,15 +63,13 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
         
         return cell
     }
+    
+    
+    
+    
     @IBAction func totelcomorder(sender: AnyObject) {
         
         let alert = UIAlertController(title: "LOGIN", message: "Your password", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        
-        
-        
-        
-        
         
         
         
@@ -109,10 +107,12 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
     @IBAction func popOderCom(sender: AnyObject) {
         
         self.performSegueWithIdentifier("popoverOrderCom", sender: self)
+        
     }
     
     @IBAction func popoder(sender: UIButton) {
      performSegueWithIdentifier("popdetail", sender: self)
+        
     }
     
     @IBOutlet var lablenameuser: UILabel!
