@@ -42,7 +42,7 @@ class CompoundusedtotleViewController: UIViewController ,UITableViewDataSource ,
         
             let notification = UILocalNotification()
             
-            notification.fireDate = NSDate(timeIntervalSinceNow :3)
+            notification.fireDate = NSDate(timeIntervalSinceNow :10)
             notification.alertBody = "Products is low!"
             notification.alertAction = "To App!"
             notification.soundName = UILocalNotificationDefaultSoundName

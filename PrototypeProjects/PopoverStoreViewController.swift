@@ -74,7 +74,7 @@ import MessageUI
             if editingStyle == UITableViewCellEditingStyle.Delete {
                 items.removeAtIndex(indexPath.row)
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-                
+                Orserlist.instance.deleteItem(indexPath.row)
             }
        
         }

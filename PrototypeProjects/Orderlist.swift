@@ -26,4 +26,8 @@ class Orserlist {
         return self.cart
     }
     
+    func deleteItem(index : Int) {
+        self.cart.removeAtIndex(index)
+    }
+    
 }

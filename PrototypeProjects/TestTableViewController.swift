@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class TestTableViewController: UIViewController , UITableViewDataSource , UITableViewDelegate , UIPopoverPresentationControllerDelegate{
     
     
@@ -17,10 +17,10 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
     @IBOutlet var labelusernamestore: UILabel!
    
     
-    var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
-    var count:[Int] = [20,8,5,77,55,25,15,99,30,45,33,33,66]
+    var data = [String]()
+    var count:[Int] = []
     
-    
+//    20,8,5,77,55,25,15,99,30,45,33,33,66
     
 
     override func viewDidLoad() {
@@ -32,8 +32,11 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       
         
         labelusernamestore.text = Userstore.instance.getNamestore()
+        
+        
         
         if [data] != nil {
         
@@ -51,7 +54,7 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
         
         let notification = UILocalNotification()
         
-        notification.fireDate = NSDate(timeIntervalSinceNow: 60)
+        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
         notification.alertBody = "The new oder from Compound!"
         notification.alertAction = "TO new oder!"
         notification.soundName = UILocalNotificationDefaultSoundName
@@ -59,6 +62,7 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
         
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,7 +81,8 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
         // #warning Incomplete implementation, return the number of rows
         return data.count
     }
-
+    
+   
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -150,7 +155,12 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
         else{
           cell.backgroundColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1.0)
         }
+        
+        
+       
         return cell
+        
+        
     }
     
     @IBAction func totleoutstore(sender: AnyObject) {
@@ -211,6 +221,9 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
         self.presentViewController(alert,animated:true, completion: nil)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        
+        
+        
         
     }
 
