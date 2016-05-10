@@ -17,7 +17,7 @@ import MessageUI
     var  data = [String]()
     var unit = [String]()
     var num  = [String]()
-     var item: String=""
+     var item: String = ""
         
         
         var items:[[String:String]] = []
@@ -28,8 +28,9 @@ import MessageUI
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.items = Orserlist.instance.get()
         
+        self.items = Orserlist.instance.get()
+       
         print(items)
         
         

@@ -13,9 +13,9 @@ class ViewController: UIViewController {
   
     var tf:UITextField?
     
-    let usercompoundpassword:String = ""
+    let usercompoundpassword:String = "1234"
     
-    let userstorepassword:String = ""
+    let userstorepassword:String = "1234"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -54,9 +54,9 @@ class TestTableViewController: UIViewController , UITableViewDataSource , UITabl
         
         let notification = UILocalNotification()
         
-        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
-        notification.alertBody = "The new oder from Compound!"
-        notification.alertAction = "TO new oder!"
+        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
+        notification.alertBody = "Products is low!"
+        notification.alertAction = "TO App!"
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["CustomField1": "w00t"]
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
