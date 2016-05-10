@@ -12,7 +12,9 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
     
     @IBOutlet var tableview: UITableView!
     
-    var data = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
+    var datacom1 = [String]()
+    var sentdata = NSString()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,10 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
           lablenameuser.text = User.instance.getName()
         
         // Do any additional setup after loading the view.
+        
+        datacom1 = ["Polymer","Latex","Sulphur","ZnO","ZDEC","ZDBC","WL","TiO2","Anti foam","Nitric Acid","LMC9CF","Ca(NO3)2","DCA"]
+        
+       
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,21 +44,29 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        return datacom1.count
     }
     
-    /*
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
+        if segue.identifier == "popdetail"{
+        let indexPath = sender as! NSIndexPath
+        
+        let des : PopoverOderStoreViewController = segue.destinationViewController as! PopoverOderStoreViewController
+        
+        des.item = datacom1[indexPath.row]
+        }
+        
     }
-    */
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellCompount1", forIndexPath: indexPath) as! Compount1TableViewCell
-        cell.labelcompount1?.text = data[indexPath.row]
+        cell.labelcompount1?.text = datacom1[indexPath.row]
         if((indexPath.row%2)==0){
             cell.backgroundColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1.0)
 
@@ -62,10 +76,30 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
         
         
         return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+//        print("You selected cell #\(indexPath.row)!")
+//        
+//        self.sentdata = NSString()
+        
+        performSegueWithIdentifier("popdetail", sender: indexPath)
+        
+       
     }
     
     
-    
+//     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if (segue.identifier == "popdetail"){
+//            
+//        }
+//        
+//            
+//        
+//    }
+  
     
     @IBAction func totelcomorder(sender: AnyObject) {
         
@@ -92,6 +126,7 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
             NSUserDefaults.standardUserDefaults().synchronize()
             
             
+            
         }
         
         
@@ -110,10 +145,17 @@ class Compount1ViewController: UIViewController ,UITableViewDataSource ,UITableV
         
     }
     
-    @IBAction func popoder(sender: UIButton) {
-     performSegueWithIdentifier("popdetail", sender: self)
-        
-    }
+//    @IBAction func popoder(sender: UIButton) {
+//        
+//        print("dfdsf")
+//
+//        
+//     performSegueWithIdentifier("popdetail", sender: self)
+//    
+//        
+//        
+//        
+//    }
     
     @IBOutlet var lablenameuser: UILabel!
     

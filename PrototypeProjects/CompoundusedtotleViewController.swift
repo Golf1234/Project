@@ -82,6 +82,7 @@ class CompoundusedtotleViewController: UIViewController ,UITableViewDataSource ,
         // Pass the selected object to the new view controller.
     }
     */
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellUsedTotle", forIndexPath: indexPath) as! CompoundusedtotleTableViewCell
         cell.textnameused?.text = data[indexPath.row]

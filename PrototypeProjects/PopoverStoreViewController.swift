@@ -14,13 +14,24 @@ import MessageUI
     @IBOutlet var tableview: UITableView!
     
     
-    var  data = [""]
-    var unit = [""]
-    var num  = [""]
+    var  data = [String]()
+    var unit = [String]()
+    var num  = [String]()
+     var item: String=""
+        
+        
+        var items:[[String:String]] = []
+        
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.items = Orserlist.instance.get()
+        
+        print(items)
+        
         
     }
 
@@ -36,7 +47,7 @@ import MessageUI
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        return items.count
     }
 
     /*
@@ -52,17 +63,20 @@ import MessageUI
         
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("popstore", forIndexPath: indexPath) as! PopoverStoreTableViewCell
-        cell.labelpop?.text = data[indexPath.row]
-        cell.labelunit?.text = num[indexPath.row]
-        cell.labelunit2?.text = unit[indexPath.row]
+        cell.labelpop?.text = items[indexPath.row]["item"]
+//        cell.labelpop?.text = data[indexPath.row]
+        cell.labelunit?.text = items[indexPath.row]["amount"]
+//        cell.labelunit2?.text = unit[indexPath.row]
         
         return cell
     }
      func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
             if editingStyle == UITableViewCellEditingStyle.Delete {
-                data.removeAtIndex(indexPath.row)
+                items.removeAtIndex(indexPath.row)
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                
             }
+       
         }
         
         
@@ -71,9 +85,12 @@ import MessageUI
         
         
          (sender as UIButton).backgroundColor = UIColor(red: 0.6824, green: 0.9765, blue: 0.9765, alpha: 1.0)
+            self.dismissViewControllerAnimated(true, completion: nil)
+       
         
-       self.dismissViewControllerAnimated(true, completion: nil)
-        
+       
+        Orserlist.instance.clear(["item": item])
+      
 
        
     }

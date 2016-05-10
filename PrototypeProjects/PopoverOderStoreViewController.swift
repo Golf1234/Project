@@ -8,15 +8,16 @@
 
 import UIKit
 
-class PopoverOderStoreViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class PopoverOderStoreViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate,UITableViewDelegate ,UIPopoverPresentationControllerDelegate {
 
     @IBOutlet var pickerview: UIPickerView!
     
     @IBOutlet var text: UITextField!
     
+    @IBOutlet var namechemical: UILabel!
     var pickerDataSource = ["kg", "ml"]
     
-    
+    var item: String=""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class PopoverOderStoreViewController: UIViewController,UIPickerViewDataSource,UI
         self.view.backgroundColor = UIColor(red: 0.9137, green: 0.9098, blue: 0.949, alpha: 1.0)
        
         
-        
+//        namechemical.text = NSString() as String
         
         
     }
@@ -63,9 +64,12 @@ class PopoverOderStoreViewController: UIViewController,UIPickerViewDataSource,UI
     
     @IBAction func Done(sender: AnyObject) {
         if((text.text ) != ""){
+            
+            Orserlist.instance.add(["item": item, "amount":text.text! ])
             self.dismissViewControllerAnimated(true, completion: nil)
 
         }
         
+                
              }
 }

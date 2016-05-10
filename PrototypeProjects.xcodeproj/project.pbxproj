@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A559AB531CE1F90100648908 /* Orderlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559AB521CE1F90100648908 /* Orderlist.swift */; };
 		A58256B61C577FF7005DE15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58256B41C577FF7005DE15D /* Main.storyboard */; };
 		A58256B81C578442005DE15D /* CompoundusedtotleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58256B71C578442005DE15D /* CompoundusedtotleViewController.swift */; };
 		A58256BA1C57882E005DE15D /* CompoundusedtotleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58256B91C57882E005DE15D /* CompoundusedtotleTableViewCell.swift */; };
@@ -127,6 +128,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A559AB521CE1F90100648908 /* Orderlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orderlist.swift; sourceTree = "<group>"; };
 		A58256B51C577FF7005DE15D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A58256B71C578442005DE15D /* CompoundusedtotleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundusedtotleViewController.swift; sourceTree = "<group>"; };
 		A58256B91C57882E005DE15D /* CompoundusedtotleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundusedtotleTableViewCell.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				A5A5502F1C91B75D001E1F20 /* Images-4.xcassets */,
 				A58D4ACF1CDCD9990042FC80 /* User.swift */,
 				A58D4AD91CDD1F740042FC80 /* Userstore.swift */,
+				A559AB521CE1F90100648908 /* Orderlist.swift */,
 			);
 			path = PrototypeProjects;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				A597BA801C4FC43600A7F870 /* TestTableViewController.swift in Sources */,
 				A5A8D4431C556AA500BA737E /* CompountUseViewController.swift in Sources */,
 				A58D4AD01CDCD9990042FC80 /* User.swift in Sources */,
+				A559AB531CE1F90100648908 /* Orderlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,6 +39,16 @@ class CompountUseViewController: UIViewController,UITableViewDataSource , UITabl
         // #warning Incomplete implementation, return the number of rows
         return data.count
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        //        print("You selected cell #\(indexPath.row)!")
+        //
+        //        self.sentdata = NSString()
+        
+        performSegueWithIdentifier("popdetail", sender: indexPath)
+        
+        
+    }
     
     /*
     // MARK: - Navigation
@@ -82,6 +92,14 @@ class CompountUseViewController: UIViewController,UITableViewDataSource , UITabl
                 controller?.delegate = self
             }
         }
+        if segue.identifier == "popdetail"{
+            let indexPath = sender as! NSIndexPath
+            
+            let des : PopoverOderStoreViewController = segue.destinationViewController as! PopoverOderStoreViewController
+            
+            des.item = data[indexPath.row]
+        }
+
         
     }
     @IBAction func logout(sender: UIBarButtonItem) {
