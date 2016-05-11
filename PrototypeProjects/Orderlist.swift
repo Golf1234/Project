@@ -13,12 +13,18 @@ class Orserlist {
     private init(){}
     
     private var cart:[[String:String]] = []
+    private var store:[[[String:String]]] = []
     
     func add(item:[String:String]){
         self.cart.append(item)
     }
     
     func clear(item:[String:String]){
+        self.cart = []
+    }
+
+    func go(){
+        self.store.append(cart)
         self.cart = []
     }
     
